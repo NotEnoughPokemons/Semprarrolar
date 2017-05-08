@@ -1,0 +1,76 @@
+
+
+/*
+1 ; Antonio Manuel ; 4 ; 36 ; 2
+3 ; Joaquim Belmiro ; 8 ; 48 ; 4
+*/
+
+
+/*
+201 ; 20 ; Paranhos, Monte dos Burgos, ISEP, Hospital de Sao Joao; 10, 20, 45 
+207 ; 10 ; Aliados, Carmo, Galiza, Rotunda da Boavista; 5, 20, 20 
+505 ; 30 ; Matosinhos, 7 Bicas, Rotunda dos Produtos Estrela, Senhora da Hora; 40, 30, 45 
+506 ; 15 ; Ribeira, Alfandega, Fluvial, Foz; 10, 25, 55
+*/
+
+
+	// Shift class - testing
+
+	Shift turno1 = Shift(201, 1, 709, 1900, 2000);
+	Shift turno2 = Shift();
+
+
+	// Driver class - testing
+
+	Driver condutor1 = Driver(1, "Antonio Manuel", 4, 36, 2);
+	condutor1.printAll();
+	cout << endl;
+	Driver condutor2 = Driver(3, "Joaquim Belmiro", 8, 48, 4);
+	condutor2.printAll();
+	cout << endl;
+	condutor1.setMaxWeekWorkingTime(5);
+	condutor1.setMinRestTime(7);
+	condutor1.setShiftMaxDuration(3);
+	condutor1.addShift(turno1);
+	condutor1.addShift(Shift(225, 7, 7899, 1900, 2700));
+	condutor1.addShift(turno2);
+	condutor1.printAll();
+	cout << endl;
+	condutor1.removeShift(turno1);
+	condutor1.printAll();
+
+
+	// Bus class - testing
+
+	Bus autocarro1 = Bus(45, 1, 201);
+	autocarro1.addShift(turno1);
+	autocarro1.addShift(turno2);
+	autocarro1.addShift(Shift(450, 7452, 78961, 123, 546798));
+	autocarro1.print();
+
+	
+
+	// Line class - testing
+
+	Line linha1 = Line(201, 45);
+	linha1.setFreq(20);
+	Line linha2 = Line(314, 10);
+	linha2.setId(207);
+	linha1.print();
+	cout << endl;
+	linha2.print();
+	cout << endl;
+	cout << "linha1.addBusStop(" << "Paranhos" << ", 1, 500)" << endl;
+	linha1.addBusStop("Paranhos", 1, 500);
+	linha1.print();
+	cout << endl;
+	cout << "linha1.addBusStop(" << "Monte dos Burgos" << ", 1, 10)" << endl;
+	linha1.addBusStop("Monte dos Burgos", 1, 10);
+	linha1.print();
+	cout << endl;
+	linha1.addBusStop("Casa", 1, 45);
+	linha1.print();
+	cout << endl;
+	linha1.removeBusStop("Monte dos Burgos");
+	linha1.print();
+	cout << endl;
