@@ -12,7 +12,7 @@ using namespace std;
 
 // These vectores are here while reading from file option isn't avalable
 vector <Driver> condutores = {
-			Driver(1, "Antonio Manuel", 4 * 60, 36 * 60, 2 * 60),	// … multiplicado por 60 pois o tempo È armazenado em minutos
+			Driver(1, "Antonio Manuel", 4 * 60, 36 * 60, 2 * 60),	// √â multiplicado por 60 pois o tempo √© armazenado em minutos
 			Driver(3, "Joaquim Belmiro", 8 * 60, 48 * 60, 4 * 60)
 			};
 vector <Line> linhas = {
@@ -22,7 +22,7 @@ vector <Line> linhas = {
 			Line(505, 30,{ "Ribeira", "Alfandega", "Fluvial", "Foz" },{ 10, 25, 55 }),
 			};
 
-
+// secondary test
 //***********Function Declaration**************//
 
 // Temporary function for others that haven't been implemented
@@ -80,7 +80,7 @@ int outOfOrder()
 	cout << "Escreva 0 para voltar atras: ";
 	string temps;
 	cin >> temps;
-	//Teste se o input È v·lido, caso contr·rio continua a pedir um novo atÈ surgir um que seja
+	//Teste se o input √© v√°lido, caso contr√°rio continua a pedir um novo at√© surgir um que seja
 	while (cin.fail() || !(temps == "0" || temps == "zero"))
 	{
 		system("CLS");
@@ -116,7 +116,7 @@ int addDriver()
 		return 0;
 	cout << "Escreva o Id do condutor: ";
 	cin >> id;
-	// Caso id j· exista, È preciso inserir outro valor
+	// Caso id j√° exista, √© preciso inserir outro valor
 	if (id == -1)
 		return 0;
 	cout << "Escreva o numero maximo de horas por turno do condutor: ";
@@ -321,7 +321,7 @@ int mainMenu()
 		mainMenuDisplay();
 		int tempi;
 		cin >> tempi;
-		//Teste se o input È v·lido, caso contr·rio continua a pedir um novo atÈ surgir um que seja
+		//Teste se o input √© v√°lido, caso contr√°rio continua a pedir um novo at√© surgir um que seja
 		while (cin.fail() || !(0 <= tempi && tempi <= 8))
 		{
 			system("CLS");
@@ -359,7 +359,7 @@ int opcao1Menu()
 		opcao1MenuDisplay();
 		int tempi;
 		cin >> tempi;
-		//Teste se o input È v·lido, caso contr·rio continua a pedir um novo atÈ surgir um que seja
+		//Teste se o input √© v√°lido, caso contr√°rio continua a pedir um novo at√© surgir um que seja
 		while (cin.fail() || !(0 <= tempi && tempi <= 3))
 		{
 			system("CLS");
@@ -387,7 +387,7 @@ int opcao1_1Menu()
 		opcao1_1MenuDisplay();
 		int tempi;
 		cin >> tempi;
-		//Teste se o input È v·lido, caso contr·rio continua a pedir um novo atÈ surgir um que seja
+		//Teste se o input √© v√°lido, caso contr√°rio continua a pedir um novo at√© surgir um que seja
 		while (cin.fail() || !(0 <= tempi && tempi <= 4))
 		{
 			system("CLS");
@@ -437,7 +437,7 @@ int opcao1_1_2Menu()
 	opcao1_1_2MenuDisplay();
 	int tempi;
 	cin >> tempi;
-	//Teste se o input È v·lido, caso contr·rio continua a pedir um novo atÈ surgir um que seja
+	//Teste se o input √© v√°lido, caso contr√°rio continua a pedir um novo at√© surgir um que seja
 	while (cin.fail() || !(0 <= tempi && tempi <= 5))
 			{
 				system("CLS");
